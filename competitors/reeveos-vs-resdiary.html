@@ -20,6 +20,7 @@ h1,h2,h3,h4,h5,h6,.font-sans,[class*="font-sans"] { font-family:"Figtree",system
                     colors: {
                         reeve: {
                             dark: '#111111',
+                            black: '#111111',
                             darker: '#061209',
                             forest: '#111111',
                             sage: '#1a1a1a',
@@ -142,16 +143,16 @@ nav, nav *, #navbar, #navbar * {
 /* CTA Headline Glow & Zoom */
 .cta-headline {
     animation: ctaZoom 3s ease-in-out infinite !important;
-    text-shadow: 0 0 20px rgba(106,217,165,0.6), 0 0 50px rgba(106,217,165,0.4), 0 0 100px rgba(106,217,165,0.3), 0 0 150px rgba(106,217,165,0.2) !important;
+    text-shadow: 0 0 20px rgba(106,217,165,0.6), 0 0 50px rgba(106,217,165,0.4), 0 0 100px rgba(201,168,76,0.3), 0 0 150px rgba(201,168,76,0.2) !important;
 }
 @keyframes ctaZoom {
     0%, 100% { 
         transform: scale(1); 
-        text-shadow: 0 0 20px rgba(106,217,165,0.6), 0 0 50px rgba(106,217,165,0.4), 0 0 100px rgba(106,217,165,0.3), 0 0 150px rgba(106,217,165,0.2);
+        text-shadow: 0 0 20px rgba(106,217,165,0.6), 0 0 50px rgba(106,217,165,0.4), 0 0 100px rgba(201,168,76,0.3), 0 0 150px rgba(201,168,76,0.2);
     }
     50% { 
         transform: scale(1.1); 
-        text-shadow: 0 0 40px rgba(106,217,165,0.9), 0 0 80px rgba(106,217,165,0.7), 0 0 140px rgba(106,217,165,0.5), 0 0 220px rgba(106,217,165,0.3);
+        text-shadow: 0 0 40px rgba(106,217,165,0.9), 0 0 80px rgba(106,217,165,0.7), 0 0 140px rgba(201,168,76,0.5), 0 0 220px rgba(201,168,76,0.3);
     }
 }
 </style>
@@ -470,14 +471,14 @@ nav, nav *, #navbar, #navbar * {
                         <!-- No-show reduction card -->
                         <div class="absolute bottom-24 left-0 bg-white rounded-2xl shadow-soft p-5 w-60 fx-fr fd3">
                             <div class="flex items-center gap-3 mb-3">
-                                <div class="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
-                                    <i class="fa-solid fa-arrow-trend-down text-green-500 text-sm"></i>
+                                <div class="w-8 h-8 bg-reeve-cream rounded-full flex items-center justify-center">
+                                    <i class="fa-solid fa-arrow-trend-down text-reeve-gold text-sm"></i>
                                 </div>
                                 <span class="text-sm font-semibold text-reeve-dark">No-show Rate</span>
                             </div>
                             <div class="flex items-end gap-2">
                                 <span class="font-sans text-3xl font-bold text-reeve-dark" style="font-weight:800">2.1%</span>
-                                <span class="text-sm text-green-500 font-medium mb-1">↓ 78%</span>
+                                <span class="text-sm text-reeve-gold font-medium mb-1">↓ 78%</span>
                             </div>
                             <p class="text-xs text-reeve-muted mt-1">Down from 9.4% industry avg</p>
                         </div>
@@ -487,8 +488,8 @@ nav, nav *, #navbar, #navbar * {
                             <p class="text-sm text-reeve-muted mb-2">Weekly Revenue</p>
                             <p class="font-sans text-2xl font-bold text-reeve-dark" style="font-weight:800">£12,847</p>
                             <div class="flex items-center gap-1 mt-1">
-                                <i class="fa-solid fa-arrow-up text-green-500 text-xs"></i>
-                                <span class="text-sm text-green-500 font-medium">+23% vs last week</span>
+                                <i class="fa-solid fa-arrow-up text-reeve-gold text-xs"></i>
+                                <span class="text-sm text-reeve-gold font-medium">+23% vs last week</span>
                             </div>
                             <!-- Mini bar chart -->
                             <div class="flex items-end gap-1.5 mt-3 h-12">
