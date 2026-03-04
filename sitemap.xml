@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Main Pages -->
+  <url><loc>https://reeve.app/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://reeve.app/about.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://reeve.app/contact.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://reeve.app/support.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://reeve.app/insights.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+
+  <!-- Features -->
+  <url><loc>https://reeve.app/features/restaurants.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://reeve.app/features/calendar.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://reeve.app/features/payments.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://reeve.app/features/mobile-app.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://reeve.app/features/integrations.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://reeve.app/features/uber-direct.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://reeve.app/features/team-up.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Industries -->
+  <url><loc>https://reeve.app/industries/index.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://reeve.app/industries/restaurants.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://reeve.app/industries/salons-spas.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://reeve.app/industries/barbers.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://reeve.app/industries/fitness-studios.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://reeve.app/industries/personal-trainers.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://reeve.app/industries/wellness-clinics.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://reeve.app/industries/physiotherapists.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://reeve.app/industries/dentists.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://reeve.app/industries/tattoo-studios.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://reeve.app/industries/photographers.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://reeve.app/industries/dog-groomers.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://reeve.app/industries/dog-walkers.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://reeve.app/industries/driving-instructors.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://reeve.app/industries/music-teachers.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://reeve.app/industries/tutors.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://reeve.app/industries/cleaners.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Competitor Comparisons -->
+  <url><loc>https://reeve.app/competitors/reeveos-vs-fresha.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://reeve.app/competitors/reeveos-vs-opentable.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://reeve.app/competitors/reeveos-vs-booksy.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://reeve.app/competitors/reeveos-vs-treatwell.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://reeve.app/competitors/reeveos-vs-resy.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://reeve.app/competitors/reeveos-vs-resdiary.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://reeve.app/competitors/reeveos-vs-thefork.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Legal -->
+  <url><loc>https://reeve.app/privacy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://reeve.app/terms.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://reeve.app/cookies.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://reeve.app/sitemap.html</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
+</urlset>

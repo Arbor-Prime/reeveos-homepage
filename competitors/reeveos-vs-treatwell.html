@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;800&display=swap" rel="stylesheet">
+<style id="figtree-override">
+*:not(i):not(.fa):not(.fas):not(.far):not(.fab) { font-family:"Figtree",system-ui,sans-serif !important; }
+h1,h2,h3,h4,h5,h6,.font-sans,[class*="font-sans"] { font-family:"Figtree",system-ui,sans-serif !important; }
+</style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReeveOS vs Treatwell — Feature Comparison | ReeveOS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        reeve: {
+                            dark: '#111111',
+                            darker: '#061209',
+                            forest: '#111111',
+                            sage: '#1a1a1a',
+                            green: '#B8973D',
+                            mint: '#C9A84C',
+                            light: '#D4B96A',
+                            pale: '#F5EDD6',
+                            cream: '#FAFAF7',
+                            warm: '#F4F0E8',
+                            sand: '#E8E0D0',
+                            latte: '#D4C5A9',
+                            brown: '#8B7355',
+                            espresso: '#5C4A32',
+                            gold: '#D4A017',
+                            amber: '#B8860B',
+                            coral: '#E8634A',
+                            white: '#FFFFFF',
+                            off: '#F4F5F0',
+                            border: '#E2E5DF',
+                            borderwarm: '#DDD5C5',
+                            text: '#2A2A28',
+                            muted: '#6B706D',
+                            subtle: '#9CA09E'
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['"Figtree"', 'sans-serif'],
+                        body: ['"Figtree"', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 20px -2px rgba(17, 17, 17, 0.08)',
+                        'glow': '0 0 20px rgba(82, 183, 136, 0.3)',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Chart rendered with pure CSS -->
+                <style>
+        ::-webkit-scrollbar { display: none; }
+        html, body { max-width: 100vw; overflow-x: hidden; }
+        img, video, iframe { max-width: 100%; height: auto; }
+        .bg-grain {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+        }
+        .nav-blur {
+            backdrop-filter: blur(12px);
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 30s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .hover-lift {
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .hover-lift:hover {
+            transform: translateY(-8px);
+        }
+    </style>
+<style id="mega-animations">
+
+nav, nav *, #navbar, #navbar * {
+  opacity: 1 !important;
+  transform: none !important;
+  filter: none !important;
+  animation: none !important;
+}
+
+[data-a]{opacity:0;will-change:transform,opacity}
+[data-a="u"]{transform:translateY(70px)}
+[data-a="d"]{transform:translateY(-50px)}
+[data-a="l"]{transform:translateX(-90px)}
+[data-a="r"]{transform:translateX(90px)}
+[data-a="s"]{transform:scale(.65)}
+[data-a="f"]{transform:perspective(900px) rotateY(20deg)}
+[data-a="b"]{filter:blur(12px);transform:scale(.96)}
+[data-a="k"]{transform:skewY(4deg) translateY(30px)}
+.av{opacity:1!important;transform:none!important;filter:none!important}
+.av{transition:all .75s cubic-bezier(.34,1.56,.64,1)}
+.ad1{transition-delay:.08s!important}.ad2{transition-delay:.16s!important}
+.ad3{transition-delay:.24s!important}.ad4{transition-delay:.32s!important}
+.ad5{transition-delay:.4s!important}.ad6{transition-delay:.48s!important}
+.ad7{transition-delay:.56s!important}.ad8{transition-delay:.64s!important}
+
+.fx-lift{transition:transform .4s cubic-bezier(.34,1.56,.64,1),box-shadow .4s ease}
+.fx-lift:hover{transform:translateY(-10px)!important;box-shadow:0 25px 50px -12px rgba(17,17,17,.18)!important}
+.fx-tilt{transform-style:preserve-3d}
+.fx-glow:hover{box-shadow:0 0 35px rgba(82,183,136,.2),0 15px 35px -8px rgba(17,17,17,.12)!important}
+.fx-shim{position:relative;overflow:hidden}
+.fx-shim::before{content:"";position:absolute;top:0;left:-100%;width:50%;height:100%;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.12),transparent);
+  z-index:10;pointer-events:none;transition:none}
+.fx-shim:hover::before{left:150%;transition:left .7s ease}
+
+@keyframes fy{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+@keyframes fxy{0%,100%{transform:translate(0,0) rotate(0)}33%{transform:translate(4px,-11px) rotate(1.5deg)}66%{transform:translate(-4px,-7px) rotate(-1deg)}}
+@keyframes fr{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-9px) rotate(2.5deg)}}
+@keyframes gp{0%,100%{box-shadow:0 0 8px rgba(82,183,136,.12)}50%{box-shadow:0 0 28px rgba(82,183,136,.3)}}
+@keyframes ms{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@keyframes pg{0%,100%{box-shadow:0 0 4px rgba(82,183,136,.3)}50%{box-shadow:0 0 12px rgba(82,183,136,.6)}}
+@keyframes cg{0%,100%{text-shadow:0 0 25px rgba(116,198,157,.3)}50%{text-shadow:0 0 50px rgba(116,198,157,.5)}}
+
+.fx-fy{animation:fy 5s ease-in-out infinite}
+.fx-fxy{animation:fxy 7s ease-in-out infinite}
+.fx-fr{animation:fr 6s ease-in-out infinite}
+.fx-gp{animation:gp 3s ease infinite}
+.fd1{animation-delay:-1s}.fd2{animation-delay:-2.5s}.fd3{animation-delay:-4s}
+#sp{position:fixed;top:0;left:0;height:3px;z-index:99999;
+  background:linear-gradient(90deg,#111111,#C9A84C,#D4B96A);animation:pg 2s ease infinite}
+
+/* CTA Headline Glow & Zoom */
+.cta-headline {
+    animation: ctaZoom 3s ease-in-out infinite !important;
+    text-shadow: 0 0 20px rgba(106,217,165,0.6), 0 0 50px rgba(106,217,165,0.4), 0 0 100px rgba(106,217,165,0.3), 0 0 150px rgba(106,217,165,0.2) !important;
+}
+@keyframes ctaZoom {
+    0%, 100% { 
+        transform: scale(1); 
+        text-shadow: 0 0 20px rgba(106,217,165,0.6), 0 0 50px rgba(106,217,165,0.4), 0 0 100px rgba(106,217,165,0.3), 0 0 150px rgba(106,217,165,0.2);
+    }
+    50% { 
+        transform: scale(1.1); 
+        text-shadow: 0 0 40px rgba(106,217,165,0.9), 0 0 80px rgba(106,217,165,0.7), 0 0 140px rgba(106,217,165,0.5), 0 0 220px rgba(106,217,165,0.3);
+    }
+}
+</style>
+</head>
+<body class="bg-reeve-cream font-body text-reeve-text antialiased overflow-x-hidden">
+    <!-- Navigation -->
+        <nav class="fixed top-0 left-0 right-0 z-50 nav-blur border-b border-reeve-border/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-[72px]">
+                <a href="/" class="flex-shrink-0 flex items-center gap-3 cursor-pointer no-underline">
+                    <div class="w-10 h-10 bg-reeve-black rounded-xl flex items-center justify-center">
+                        <span class="text-white font-sans font-extrabold text-xl">R</span>
+                    </div>
+                    <span class="text-reeve-black font-sans font-extrabold text-[22px] tracking-tight">ReeveOS</span>
+                </a>
+                <div class="hidden lg:flex items-center gap-1" id="nav-links">
+                    <a href="/" class="px-3 py-2 rounded-lg text-sm font-semibold text-reeve-black/70 hover:text-reeve-black hover:bg-reeve-black/5 transition-all">Home</a>
+                    <button class="nav-drop-btn flex items-center gap-1 px-3 py-2 rounded-lg text-sm font-semibold text-reeve-black/70 hover:text-reeve-black hover:bg-reeve-black/5 transition-all" data-target="features-panel">
+                        Features <i class="fa-solid fa-chevron-down text-[10px] ml-0.5 opacity-60 transition-transform duration-200"></i>
+                    </button>
+                    <button class="nav-drop-btn flex items-center gap-1 px-3 py-2 rounded-lg text-sm font-semibold text-reeve-black/70 hover:text-reeve-black hover:bg-reeve-black/5 transition-all" data-target="industries-panel">
+                        Industries <i class="fa-solid fa-chevron-down text-[10px] ml-0.5 opacity-60 transition-transform duration-200"></i>
+                    </button>
+                    <a href="/for-business" class="px-3 py-2 rounded-lg text-sm font-semibold text-reeve-black/70 hover:text-reeve-black hover:bg-reeve-black/5 transition-all">For Business</a>
+                    <button class="nav-drop-btn flex items-center gap-1 px-3 py-2 rounded-lg text-sm font-semibold text-reeve-black/70 hover:text-reeve-black hover:bg-reeve-black/5 transition-all" data-target="company-panel">
+                        Company <i class="fa-solid fa-chevron-down text-[10px] ml-0.5 opacity-60 transition-transform duration-200"></i>
+                    </button>
+                </div>
+                <div class="hidden lg:flex items-center gap-3">
+                    <a href="https://portal.reeve.app/login" class="text-reeve-black font-semibold text-sm hover:text-reeve-gold transition-colors">Log in</a>
+                    <a href="https://portal.reeve.app/signup" class="bg-reeve-black hover:bg-reeve-dark text-white font-semibold text-sm py-2.5 px-6 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl">
+                        Get Started Free
+                    </a>
+                </div>
+                <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="lg:hidden w-10 h-10 rounded-xl flex items-center justify-center text-reeve-black hover:bg-reeve-black/5">
+                    <i class="fa-solid fa-bars text-lg"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- FEATURES MEGA PANEL -->
+        <div id="features-panel" class="nav-panel hidden absolute left-0 right-0 top-[72px] bg-white border-t border-b border-reeve-border shadow-xl z-50" style="animation:fadeDown .2s ease-out">
+            <div class="max-w-7xl mx-auto px-6 py-8">
+                <div class="grid grid-cols-3 gap-8">
+                    <div class="col-span-2">
+                        <p class="text-[11px] font-bold text-reeve-black/40 uppercase tracking-widest mb-4">Platform Features</p>
+                        <div class="grid grid-cols-2 gap-1">
+                            <a href="/features/restaurants.html" class="flex items-center gap-3 p-3 rounded-xl hover:bg-reeve-black/5 transition-colors no-underline group">
+                                <div class="w-9 h-9 rounded-lg bg-reeve-black/5 flex items-center justify-center group-hover:bg-reeve-gold/20"><i class="fa-solid fa-utensils text-sm text-reeve-black/50 group-hover:text-reeve-black"></i></div>
+                                <div><p class="text-sm font-semibold text-reeve-black m-0">For Restaurants</p><p class="text-xs text-reeve-black/45 m-0">Floor plans, covers & ordering</p></div>
+                            </a>
+                            <a href="/features/calendar.html" class="flex items-center gap-3 p-3 rounded-xl hover:bg-reeve-black/5 transition-colors no-underline group">
+                                <div class="w-9 h-9 rounded-lg bg-reeve-black/5 flex items-center justify-center group-hover:bg-reeve-gold/20"><i class="fa-solid fa-calendar-check text-sm text-reeve-black/50 group-hover:text-reeve-black"></i></div>
+                                <div><p class="text-sm font-semibold text-reeve-black m-0">Smart Calendar</p><p class="text-xs text-reeve-black/45 m-0">Flexible, intelligent scheduling</p></div>
+                            </a>
+                            <a href="/features/payments.html" class="flex items-center gap-3 p-3 rounded-xl hover:bg-reeve-black/5 transition-colors no-underline group">
+                                <div class="w-9 h-9 rounded-lg bg-reeve-black/5 flex items-center justify-center group-hover:bg-reeve-gold/20"><i class="fa-solid fa-credit-card text-sm text-reeve-black/50 group-hover:text-reeve-black"></i></div>
+                                <div><p class="text-sm font-semibold text-reeve-black m-0">Stripe Payments</p><p class="text-xs text-reeve-black/45 m-0">Direct payouts, no middleman</p></div>
+                            </a>
+                            <a href="/features/mobile-app.html" class="flex items-center gap-3 p-3 rounded-xl hover:bg-reeve-black/5 transition-colors no-underline group">
+                                <div class="w-9 h-9 rounded-lg bg-reeve-black/5 flex items-center justify-center group-hover:bg-reeve-gold/20"><i class="fa-solid fa-mobile-screen text-sm text-reeve-black/50 group-hover:text-reeve-black"></i></div>
+                                <div><p class="text-sm font-semibold text-reeve-black m-0">Mobile App</p><p class="text-xs text-reeve-black/45 m-0">Voice AI & smart assistant</p></div>
+                            </a>
+                            <a href="/features/integrations.html" class="flex items-center gap-3 p-3 rounded-xl hover:bg-reeve-black/5 transition-colors no-underline group">
+                                <div class="w-9 h-9 rounded-lg bg-reeve-black/5 flex items-center justify-center group-hover:bg-reeve-gold/20"><i class="fa-solid fa-plug text-sm text-reeve-black/50 group-hover:text-reeve-black"></i></div>
+                                <div><p class="text-sm font-semibold text-reeve-black m-0">Integrations</p><p class="text-xs text-reeve-black/45 m-0">Google Cal, Outlook & more</p></div>
+                            </a>
+                            <a href="/features/uber-direct.html" class="flex items-center gap-3 p-3 rounded-xl hover:bg-reeve-black/5 transition-colors no-underline group">
+                                <div class="w-9 h-9 rounded-lg bg-reeve-black/5 flex items-center justify-center group-hover:bg-reeve-gold/20"><i class="fa-solid fa-truck-fast text-sm text-reeve-black/50 group-hover:text-reeve-black"></i></div>
+                                <div><p class="text-sm font-semibold text-reeve-black m-0">Uber Direct</p><p class="text-xs text-reeve-black/45 m-0">Delivery without commission</p></div>
+                            </a>
+                            <a href="/features/team-up.html" class="flex items-center gap-3 p-3 rounded-xl hover:bg-reeve-black/5 transition-colors no-underline group">
+                                <div class="w-9 h-9 rounded-lg bg-reeve-black/5 flex items-center justify-center group-hover:bg-reeve-gold/20"><i class="fa-solid fa-user-group text-sm text-reeve-black/50 group-hover:text-reeve-black"></i></div>
+                                <div><p class="text-sm font-semibold text-reeve-black m-0">Team Up & Save</p><p class="text-xs text-reeve-black/45 m-0">Refer & get 50% off forever</p></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="bg-reeve-black rounded-2xl p-6 flex flex-col justify-between">
+                        <div>
+                            <p class="text-reeve-gold font-bold text-sm mb-2">Zero Commission</p>
+                            <p class="text-white font-extrabold text-xl mb-2 font-sans">Keep 100% of your revenue</p>
+                            <p class="text-white/60 text-sm">No per-booking fees. No contracts. Just a simple monthly plan.</p>
+                        </div>
+                        <a href="https://portal.reeve.app/signup" class="mt-4 inline-flex items-center gap-2 bg-reeve-gold text-reeve-black font-bold text-sm py-2.5 px-5 rounded-full hover:bg-white transition-all w-fit no-underline">
+                            Start Free <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- INDUSTRIES MEGA PANEL -->
+        <div id="industries-panel" class="nav-panel hidden absolute left-0 right-0 top-[72px] bg-white border-t border-b border-reeve-border shadow-xl z-50" style="animation:fadeDown .2s ease-out">
+            <div class="max-w-7xl mx-auto px-6 py-8">
+                <div class="grid grid-cols-3 gap-8">
+                    <div class="col-span-2">
+                        <p class="text-[11px] font-bold text-reeve-black/40 uppercase tracking-widest mb-4">Who We Serve</p>
+                        <div class="grid grid-cols-4 gap-1">
+                            <a href="/industries/restaurants" class="flex items-center gap-2.5 p-2.5 rounded-xl hover:bg-reeve-black/5 transition-colors no-underline group"><div class="w-8 h-8 rounded-lg bg-reeve-black/5 flex items-center justify-center group-hover:bg-reeve-gold/20"><i class="fa-solid fa-utensils text-xs text-reeve-black/50"></i></div><span class="text-sm font-semibold text-reeve-black">Restaurants</span></a>
+                            <a href="/industries/barbers" class="flex items-center gap-2.5 p-2.5 rounded-xl hover:bg-reeve-black/5 transition-colors no-underline group"><div class="w-8 h-8 rounded-lg bg-reeve-black/5 flex items-center justify-center group-hover:bg-reeve-gold/20"><i class="fa-solid fa-scissors text-xs text-reeve-black/50"></i></div><span class="text-sm font-semibold text-reeve-black">Barbers</span></a>
+                            <a href="/industries/salons-spas" class="flex items-center gap-2.5 p-2.5 rounded-xl hover:bg-reeve-black/5 transition-colors no-underline group"><div class="w-8 h-8 rounded-lg bg-reeve-black/5 flex items-center justify-center group-hover:bg-reeve-gold/20"><i class="fa-solid fa-spa text-xs text-reeve-black/50"></i></div><span class="text-sm font-semibold text-reeve-black">Salons & Spas</span></a>
+                            <a href="/industries/personal-trainers" class="flex items-center gap-2.5 p-2.5 rounded-xl hover:bg-reeve-black/5 transition-colors no-underline group"><div class="w-8 h-8 rounded-lg bg-reeve-black/5 flex items-center justify-center group-hover:bg-reeve-gold/20"><i class="fa-solid fa-dumbbell text-xs text-reeve-black/50"></i></div><span class="text-sm font-semibold text-reeve-black">Personal Trainers</span></a>
+                            <a href="/industries/tattoo-studios" class="flex items-center gap-2.5 p-2.5 rounded-xl hover:bg-reeve-black/5 transition-colors no-underline group"><div class="w-8 h-8 rounded-lg bg-reeve-black/5 flex items-center justify-center group-hover:bg-reeve-gold/20"><i class="fa-solid fa-palette text-xs text-reeve-black/50"></i></div><span class="text-sm font-semibold text-reeve-black">Tattoo Studios</span></a>
+                            <a href="/industries/dentists" class="flex items-center gap-2.5 p-2.5 rounded-xl hover:bg-reeve-black/5 transition-colors no-underline group"><div class="w-8 h-8 rounded-lg bg-reeve-black/5 flex items-center justify-center group-hover:bg-reeve-gold/20"><i class="fa-solid fa-tooth text-xs text-reeve-black/50"></i></div><span class="text-sm font-semibold text-reeve-black">Dentists</span></a>
+                            <a href="/industries/photographers" class="flex items-center gap-2.5 p-2.5 rounded-xl hover:bg-reeve-black/5 transition-colors no-underline group"><div class="w-8 h-8 rounded-lg bg-reeve-black/5 flex items-center justify-center group-hover:bg-reeve-gold/20"><i class="fa-solid fa-camera text-xs text-reeve-black/50"></i></div><span class="text-sm font-semibold text-reeve-black">Photographers</span></a>
+                            <a href="/industries/fitness-studios" class="flex items-center gap-2.5 p-2.5 rounded-xl hover:bg-reeve-black/5 transition-colors no-underline group"><div class="w-8 h-8 rounded-lg bg-reeve-black/5 flex items-center justify-center group-hover:bg-reeve-gold/20"><i class="fa-solid fa-bolt text-xs text-reeve-black/50"></i></div><span class="text-sm font-semibold text-reeve-black">Fitness Studios</span></a>
+                        </div>
+                        <a href="/industries" class="mt-4 inline-flex items-center gap-2 text-sm font-bold text-reeve-gold hover:text-reeve-black transition-colors no-underline">View all industries <i class="fa-solid fa-arrow-right text-xs"></i></a>
+                    </div>
+                    <div class="bg-gradient-to-br from-reeve-gold/10 to-reeve-black/5 rounded-2xl p-6 border border-reeve-gold/20">
+                        <p class="text-reeve-black font-extrabold text-lg mb-2 font-sans">One platform, every business</p>
+                        <p class="text-reeve-black/60 text-sm mb-4">From barbers to restaurants — if you take bookings, ReeveOS is for you.</p>
+                        <a href="/for-business" class="inline-flex items-center gap-2 bg-reeve-black text-white font-bold text-sm py-2.5 px-5 rounded-full hover:bg-reeve-dark transition-all no-underline">Learn More <i class="fa-solid fa-arrow-right text-xs"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- COMPANY PANEL -->
+        <div id="company-panel" class="nav-panel hidden absolute right-0 top-[72px] w-[360px] bg-white border border-reeve-border rounded-b-2xl shadow-xl z-50 p-3" style="animation:fadeDown .2s ease-out;right:10%">
+            <a href="/about.html" class="flex items-center gap-3 p-3 rounded-xl hover:bg-reeve-black/5 transition-colors no-underline group">
+                <div class="w-9 h-9 rounded-lg bg-reeve-black/5 flex items-center justify-center group-hover:bg-reeve-gold/20"><i class="fa-solid fa-info-circle text-sm text-reeve-black/50"></i></div>
+                <div><p class="text-sm font-semibold text-reeve-black m-0">About Us</p><p class="text-xs text-reeve-black/45 m-0">Our mission & story</p></div>
+            </a>
+            <a href="/#faq" class="flex items-center gap-3 p-3 rounded-xl hover:bg-reeve-black/5 transition-colors no-underline group">
+                <div class="w-9 h-9 rounded-lg bg-reeve-black/5 flex items-center justify-center group-hover:bg-reeve-gold/20"><i class="fa-solid fa-circle-question text-sm text-reeve-black/50"></i></div>
+                <div><p class="text-sm font-semibold text-reeve-black m-0">FAQs</p><p class="text-xs text-reeve-black/45 m-0">Common questions answered</p></div>
+            </a>
+            <a href="/support.html" class="flex items-center gap-3 p-3 rounded-xl hover:bg-reeve-black/5 transition-colors no-underline group">
+                <div class="w-9 h-9 rounded-lg bg-reeve-black/5 flex items-center justify-center group-hover:bg-reeve-gold/20"><i class="fa-solid fa-headset text-sm text-reeve-black/50"></i></div>
+                <div><p class="text-sm font-semibold text-reeve-black m-0">Support Center</p><p class="text-xs text-reeve-black/45 m-0">Help when you need it</p></div>
+            </a>
+            <a href="/contact.html" class="flex items-center gap-3 p-3 rounded-xl hover:bg-reeve-black/5 transition-colors no-underline group">
+                <div class="w-9 h-9 rounded-lg bg-reeve-black/5 flex items-center justify-center group-hover:bg-reeve-gold/20"><i class="fa-solid fa-envelope text-sm text-reeve-black/50"></i></div>
+                <div><p class="text-sm font-semibold text-reeve-black m-0">Contact</p><p class="text-xs text-reeve-black/45 m-0">Get in touch</p></div>
+            </a>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-reeve-border px-4 py-4 max-h-[80vh] overflow-y-auto">
+            <a href="/" class="block py-3 text-base font-semibold text-reeve-black">Home</a>
+            <p class="text-xs font-bold text-reeve-black/40 uppercase tracking-wider mt-2 mb-1 px-1">Features</p>
+            <a href="/features/restaurants.html" class="block py-2 pl-3 text-sm text-reeve-black/70">For Restaurants</a>
+            <a href="/features/calendar.html" class="block py-2 pl-3 text-sm text-reeve-black/70">Smart Calendar</a>
+            <a href="/features/payments.html" class="block py-2 pl-3 text-sm text-reeve-black/70">Stripe Payments</a>
+            <a href="/features/mobile-app.html" class="block py-2 pl-3 text-sm text-reeve-black/70">Mobile App</a>
+            <a href="/features/integrations.html" class="block py-2 pl-3 text-sm text-reeve-black/70">Integrations</a>
+            <a href="/features/uber-direct.html" class="block py-2 pl-3 text-sm text-reeve-black/70">Uber Direct</a>
+            <a href="/features/team-up.html" class="block py-2 pl-3 text-sm text-reeve-black/70">Team Up & Save</a>
+            <p class="text-xs font-bold text-reeve-black/40 uppercase tracking-wider mt-3 mb-1 px-1">Industries</p>
+            <a href="/industries/restaurants" class="block py-2 pl-3 text-sm text-reeve-black/70">Restaurants</a>
+            <a href="/industries/barbers" class="block py-2 pl-3 text-sm text-reeve-black/70">Barbers</a>
+            <a href="/industries/salons-spas" class="block py-2 pl-3 text-sm text-reeve-black/70">Salons & Spas</a>
+            <a href="/industries" class="block py-2 pl-3 text-sm font-bold text-reeve-gold">View all →</a>
+            <a href="/for-business" class="block py-3 text-base font-semibold text-reeve-black">For Business</a>
+            <a href="/about.html" class="block py-3 text-base font-semibold text-reeve-black">About</a>
+            <a href="/#faq" class="block py-3 text-base font-semibold text-reeve-black">FAQs</a>
+            <div class="border-t border-reeve-border mt-3 pt-3 flex flex-col gap-2">
+                <a href="https://portal.reeve.app/login" class="text-center text-reeve-black font-bold text-sm py-3 rounded-xl border border-reeve-black/20">Log in</a>
+                <a href="https://portal.reeve.app/signup" class="text-center bg-reeve-black text-white font-bold text-sm py-3 rounded-full">Get Started Free</a>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+    (function(){
+        var current = null;
+        var btns = document.querySelectorAll('.nav-drop-btn');
+        var panels = document.querySelectorAll('.nav-panel');
+        
+        btns.forEach(function(btn){
+            btn.addEventListener('click', function(e){
+                e.stopPropagation();
+                var target = btn.getAttribute('data-target');
+                var panel = document.getElementById(target);
+                if(current === target){
+                    panel.classList.add('hidden');
+                    btn.classList.remove('bg-reeve-black/10','text-reeve-black');
+                    var chev = btn.querySelector('i');
+                    if(chev) chev.style.transform = '';
+                    current = null;
+                } else {
+                    panels.forEach(function(p){ p.classList.add('hidden'); });
+                    btns.forEach(function(b){ 
+                        b.classList.remove('bg-reeve-black/10','text-reeve-black');
+                        var c = b.querySelector('i');
+                        if(c) c.style.transform = '';
+                    });
+                    panel.classList.remove('hidden');
+                    btn.classList.add('bg-reeve-black/10','text-reeve-black');
+                    var chev = btn.querySelector('i');
+                    if(chev) chev.style.transform = 'rotate(180deg)';
+                    current = target;
+                }
+            });
+        });
+        
+        document.addEventListener('click', function(e){
+            if(!e.target.closest('nav')){
+                panels.forEach(function(p){ p.classList.add('hidden'); });
+                btns.forEach(function(b){
+                    b.classList.remove('bg-reeve-black/10','text-reeve-black');
+                    var c = b.querySelector('i');
+                    if(c) c.style.transform = '';
+                });
+                current = null;
+            }
+        });
+    })();
+    </script>
+
+    <style>
+    @keyframes fadeDown { from { opacity:0; transform:translateY(-8px); } to { opacity:1; transform:translateY(0); } }
+    </style>
+
+<!-- Mobile Menu JS -->
+    <script>
+    (function(){
+        var btn=document.getElementById('mobile-menu-btn'),menu=document.getElementById('mobile-menu'),b1=document.getElementById('bar1'),b2=document.getElementById('bar2'),b3=document.getElementById('bar3'),open=false;
+        if(btn&&menu){btn.addEventListener('click',function(){open=!open;menu.classList.toggle('hidden');if(open){b1.style.transform='rotate(45deg) translate(4px,4px)';b2.style.opacity='0';b3.style.transform='rotate(-45deg) translate(4px,-4px)';}else{b1.style.transform='';b2.style.opacity='1';b3.style.transform='';}});menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu.classList.add('hidden');open=false;b1.style.transform='';b2.style.opacity='1';b3.style.transform='';});});}
+    })();
+    </script><!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
+        <div class="absolute inset-0 bg-grain opacity-40"></div>
+        <div class="absolute top-20 right-0 w-96 h-96 bg-reeve-gold/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-80 h-80 bg-reeve-slate/8 rounded-full blur-3xl"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Left: Copy -->
+                <div>
+                    <div class="inline-flex items-center gap-2 bg-reeve-pale/60 border border-reeve-light/40 rounded-full px-4 py-2 mb-6">
+                        <span class="w-2 h-2 bg-reeve-gold rounded-full animate-pulse"></span>
+                        <span class="text-sm font-semibold text-reeve-slate">Built for Restaurants</span>
+                    </div>
+                    
+                    <h1 class="font-sans text-3xl md:text-4xl lg:text-6xl xl:text-7xl text-reeve-dark leading-[0.95] mb-6" style="font-weight:900">
+                        Fill Every<br>
+                        <span class="text-reeve-gold">Table.</span><br>
+                        Every Night.
+                    </h1>
+                    
+                    <p class="text-lg lg:text-xl text-reeve-muted leading-relaxed mb-8 max-w-lg">
+                        Stop losing covers to no-shows and empty tables. ReeveOS gives you the booking system, deposit protection, and customer insights your restaurant needs to thrive.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 mb-10">
+                        <a href="https://portal.reeve.app/signup" class="bg-reeve-black hover:bg-reeve-dark text-white font-semibold py-4 px-8 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl text-center text-lg">
+                            Start Free Trial
+                        </a>
+                        <a href="https://portal.reeve.app/login" class="border-2 border-reeve-black text-reeve-black font-semibold py-4 px-8 rounded-full hover:bg-reeve-black hover:text-white transition-all duration-300 text-center text-lg">
+                            Watch Demo
+                        </a>
+                    </div>
+                    
+                    <div class="flex items-center gap-6 text-sm text-reeve-muted">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-check text-reeve-gold"></i>
+                            <span>No setup fee</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-check text-reeve-gold"></i>
+                            <span>14-day free trial</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-check text-reeve-gold"></i>
+                            <span>Cancel anytime</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right: Hero Visual - Floating UI Cards -->
+                <div class="relative hidden lg:block">
+                    <div class="relative w-full h-[520px]">
+                        <!-- Main booking card -->
+                        <div class="absolute top-0 left-8 bg-white rounded-2xl shadow-soft p-6 w-72 fx-fy fd1">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-10 h-10 bg-reeve-pale rounded-lg flex items-center justify-center">
+                                    <i class="fa-solid fa-utensils text-reeve-black"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-reeve-dark text-sm">New Booking</p>
+                                    <p class="text-xs text-reeve-muted">Just now</p>
+                                </div>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-reeve-muted">Guest</span>
+                                    <span class="font-medium">Sarah Mitchell</span>
+                                </div>
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-reeve-muted">Party size</span>
+                                    <span class="font-medium">4 covers</span>
+                                </div>
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-reeve-muted">Time</span>
+                                    <span class="font-medium">7:30 PM</span>
+                                </div>
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-reeve-muted">Deposit</span>
+                                    <span class="font-medium text-reeve-slate">£20.00 paid</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Tonight's covers card -->
+                        <div class="absolute top-4 right-0 bg-reeve-black text-white rounded-2xl shadow-soft p-5 w-56 fx-fxy fd2">
+                            <p class="text-sm text-white/70 mb-1">Tonight's Covers</p>
+                            <p class="font-sans text-4xl font-bold" style="font-weight:800">87<span class="text-lg text-white/60">/94</span></p>
+                            <div class="mt-3 h-2 bg-white/20 rounded-full overflow-hidden">
+                                <div class="h-full bg-reeve-gold rounded-full" style="width:92%"></div>
+                            </div>
+                            <p class="text-xs text-white/60 mt-2">92% capacity</p>
+                        </div>
+                        
+                        <!-- No-show reduction card -->
+                        <div class="absolute bottom-24 left-0 bg-white rounded-2xl shadow-soft p-5 w-60 fx-fr fd3">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
+                                    <i class="fa-solid fa-arrow-trend-down text-green-500 text-sm"></i>
+                                </div>
+                                <span class="text-sm font-semibold text-reeve-dark">No-show Rate</span>
+                            </div>
+                            <div class="flex items-end gap-2">
+                                <span class="font-sans text-3xl font-bold text-reeve-dark" style="font-weight:800">2.1%</span>
+                                <span class="text-sm text-green-500 font-medium mb-1">↓ 78%</span>
+                            </div>
+                            <p class="text-xs text-reeve-muted mt-1">Down from 9.4% industry avg</p>
+                        </div>
+                        
+                        <!-- Revenue card -->
+                        <div class="absolute bottom-0 right-4 bg-white rounded-2xl shadow-soft p-5 w-64 fx-fy fd1">
+                            <p class="text-sm text-reeve-muted mb-2">Weekly Revenue</p>
+                            <p class="font-sans text-2xl font-bold text-reeve-dark" style="font-weight:800">£12,847</p>
+                            <div class="flex items-center gap-1 mt-1">
+                                <i class="fa-solid fa-arrow-up text-green-500 text-xs"></i>
+                                <span class="text-sm text-green-500 font-medium">+23% vs last week</span>
+                            </div>
+                            <!-- Mini bar chart -->
+                            <div class="flex items-end gap-1.5 mt-3 h-12">
+                                <div class="flex-1 bg-reeve-pale rounded-t" style="height:40%"></div>
+                                <div class="flex-1 bg-reeve-pale rounded-t" style="height:55%"></div>
+                                <div class="flex-1 bg-reeve-pale rounded-t" style="height:45%"></div>
+                                <div class="flex-1 bg-reeve-light rounded-t" style="height:70%"></div>
+                                <div class="flex-1 bg-reeve-light rounded-t" style="height:65%"></div>
+                                <div class="flex-1 bg-reeve-gold rounded-t" style="height:85%"></div>
+                                <div class="flex-1 bg-reeve-gold rounded-t" style="height:100%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Bar -->
+    <section class="py-8 border-y border-reeve-border bg-white/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+                <p class="text-sm font-medium text-reeve-muted uppercase tracking-wider">Trusted by restaurants across the UK</p>
+                <div class="flex items-center gap-12">
+                    <div class="text-center">
+                        <p class="font-sans text-3xl font-bold text-reeve-dark" style="font-weight:800">1,200+</p>
+                        <p class="text-xs text-reeve-muted">Restaurants</p>
+                    </div>
+                    <div class="w-px h-10 bg-reeve-border"></div>
+                    <div class="text-center">
+                        <p class="font-sans text-3xl font-bold text-reeve-dark" style="font-weight:800">2.4M</p>
+                        <p class="text-xs text-reeve-muted">Covers booked</p>
+                    </div>
+                    <div class="w-px h-10 bg-reeve-border"></div>
+                    <div class="text-center">
+                        <p class="font-sans text-3xl font-bold text-reeve-dark" style="font-weight:800">£4.2M</p>
+                        <p class="text-xs text-reeve-muted">No-show losses prevented</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pain Points Section -->
+    <section class="py-20 lg:py-28 bg-white relative">
+        <div class="absolute inset-0 bg-grain opacity-20"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="font-sans text-3xl md:text-4xl lg:text-5xl text-reeve-dark mb-6" style="font-weight:900">
+                    Running a restaurant<br>is hard enough
+                </h2>
+                <p class="text-lg text-reeve-muted">
+                    You shouldn't have to wrestle with your booking system too. Here's what we fix.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Pain 1 -->
+                <div class="group relative bg-reeve-cream rounded-2xl p-8 border border-reeve-border hover:border-reeve-gold/40 transition-all duration-300">
+                    <div class="w-14 h-14 bg-red-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-red-100 transition-colors">
+                        <i class="fa-solid fa-chair text-red-400 text-xl"></i>
+                    </div>
+                    <h3 class="font-sans text-xl font-bold text-reeve-dark mb-3" style="font-weight:800">Empty Tables, Full Waitlist</h3>
+                    <p class="text-reeve-muted leading-relaxed">No-shows cost UK restaurants £16B annually. Your table sits empty while hungry guests can't get in.</p>
+                    <div class="mt-6 pt-6 border-t border-reeve-border">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-arrow-right text-reeve-gold text-sm"></i>
+                            <span class="text-sm font-semibold text-reeve-slate">Smart deposits eliminate no-shows</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pain 2 -->
+                <div class="group relative bg-reeve-cream rounded-2xl p-8 border border-reeve-border hover:border-reeve-gold/40 transition-all duration-300">
+                    <div class="w-14 h-14 bg-amber-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-amber-100 transition-colors">
+                        <i class="fa-solid fa-phone-volume text-amber-400 text-xl"></i>
+                    </div>
+                    <h3 class="font-sans text-xl font-bold text-reeve-dark mb-3" style="font-weight:800">Drowning in Phone Calls</h3>
+                    <p class="text-reeve-muted leading-relaxed">Your staff spend service time answering the phone instead of looking after the guests already in front of them.</p>
+                    <div class="mt-6 pt-6 border-t border-reeve-border">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-arrow-right text-reeve-gold text-sm"></i>
+                            <span class="text-sm font-semibold text-reeve-slate">24/7 online bookings, zero phone tag</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pain 3 -->
+                <div class="group relative bg-reeve-cream rounded-2xl p-8 border border-reeve-border hover:border-reeve-gold/40 transition-all duration-300">
+                    <div class="w-14 h-14 bg-purple-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-purple-100 transition-colors">
+                        <i class="fa-solid fa-eye-slash text-purple-400 text-xl"></i>
+                    </div>
+                    <h3 class="font-sans text-xl font-bold text-reeve-dark mb-3" style="font-weight:800">Flying Blind on Data</h3>
+                    <p class="text-reeve-muted leading-relaxed">You don't know who your regulars are, what they order, or when your peak hours really hit. OpenTable keeps your data hostage.</p>
+                    <div class="mt-6 pt-6 border-t border-reeve-border">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-arrow-right text-reeve-gold text-sm"></i>
+                            <span class="text-sm font-semibold text-reeve-slate">Your guests, your data, your insights</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 lg:py-28 bg-reeve-cream relative">
+        <div class="absolute inset-0 bg-grain opacity-30"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="font-sans text-3xl md:text-4xl lg:text-5xl text-reeve-dark mb-6" style="font-weight:900">
+                    Everything your<br>front-of-house needs
+                </h2>
+                <p class="text-lg text-reeve-muted">
+                    From first click to final bill, ReeveOS handles the entire guest journey.
+                </p>
+            </div>
+
+            <!-- Feature 1: Floor Plan -->
+            <div class="grid lg:grid-cols-2 gap-12 items-center mb-24">
+                <div>
+                    <div class="inline-flex items-center gap-2 bg-reeve-pale/60 border border-reeve-light/40 rounded-full px-3 py-1.5 mb-4">
+                        <i class="fa-solid fa-grip text-reeve-slate text-xs"></i>
+                        <span class="text-xs font-semibold text-reeve-slate uppercase tracking-wider">Floor Management</span>
+                    </div>
+                    <h3 class="font-sans text-3xl lg:text-4xl text-reeve-dark mb-4" style="font-weight:800">
+                        Drag-and-drop<br>floor plans
+                    </h3>
+                    <p class="text-reeve-muted text-lg leading-relaxed mb-6">
+                        Build your exact floor layout on a tablet. Drag tables, merge tops for large parties, and see real-time status at a glance. Your host stand, digitised.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3">
+                            <div class="w-6 h-6 bg-reeve-pale rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-check text-reeve-slate text-xs"></i>
+                            </div>
+                            <span class="text-reeve-text">Visual table status — available, seated, dessert, bill</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <div class="w-6 h-6 bg-reeve-pale rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-check text-reeve-slate text-xs"></i>
+                            </div>
+                            <span class="text-reeve-text">Merge & split tables for any party size</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <div class="w-6 h-6 bg-reeve-pale rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-check text-reeve-slate text-xs"></i>
+                            </div>
+                            <span class="text-reeve-text">Multiple rooms, terraces, and private dining</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="relative">
+                    <div class="bg-white rounded-3xl shadow-soft border border-reeve-border p-6">
+                        <!-- Mock floor plan -->
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="font-sans font-bold text-reeve-dark" style="font-weight:800">Main Dining Room</span>
+                            <span class="text-xs bg-reeve-pale text-reeve-slate px-3 py-1 rounded-full font-semibold">Live View</span>
+                        </div>
+                        <div class="bg-reeve-cream rounded-2xl p-6 min-h-[280px] relative">
+                            <!-- Tables -->
+                            <div class="absolute top-6 left-6 w-16 h-16 bg-reeve-gold/20 border-2 border-reeve-gold rounded-xl flex items-center justify-center">
+                                <span class="text-xs font-bold text-reeve-slate">T1</span>
+                            </div>
+                            <div class="absolute top-6 left-28 w-16 h-16 bg-reeve-gold/15 border-2 border-reeve-gold/60 rounded-xl flex items-center justify-center">
+                                <span class="text-xs font-bold text-reeve-gold">T2</span>
+                            </div>
+                            <div class="absolute top-6 right-6 w-24 h-16 bg-amber-100 border-2 border-amber-400/60 rounded-xl flex items-center justify-center">
+                                <span class="text-xs font-bold text-amber-600">T3+T4</span>
+                            </div>
+                            <div class="absolute top-28 left-6 w-16 h-16 bg-reeve-gold/20 border-2 border-reeve-gold rounded-xl flex items-center justify-center">
+                                <span class="text-xs font-bold text-reeve-slate">T5</span>
+                            </div>
+                            <div class="absolute top-28 left-28 w-16 h-16 bg-reeve-gold/20 border-2 border-reeve-gold rounded-xl flex items-center justify-center">
+                                <span class="text-xs font-bold text-reeve-slate">T6</span>
+                            </div>
+                            <div class="absolute top-28 right-6 w-16 h-16 bg-blue-100 border-2 border-blue-400/60 rounded-xl flex items-center justify-center">
+                                <span class="text-xs font-bold text-blue-600">T7</span>
+                            </div>
+                            <div class="absolute bottom-6 left-6 w-20 h-20 bg-reeve-gold/15 border-2 border-reeve-gold/60 rounded-full flex items-center justify-center">
+                                <span class="text-xs font-bold text-reeve-gold">T8</span>
+                            </div>
+                            <div class="absolute bottom-6 right-6 w-32 h-16 bg-reeve-pale border-2 border-reeve-light rounded-xl flex items-center justify-center">
+                                <span class="text-xs font-bold text-reeve-muted">Bar Seating</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 mt-4 text-xs">
+                            <div class="flex items-center gap-1.5"><div class="w-3 h-3 rounded bg-reeve-gold/30 border border-reeve-gold"></div><span class="text-reeve-muted">Available</span></div>
+                            <div class="flex items-center gap-1.5"><div class="w-3 h-3 rounded bg-reeve-gold/20 border border-reeve-gold/60"></div><span class="text-reeve-muted">Seated</span></div>
+                            <div class="flex items-center gap-1.5"><div class="w-3 h-3 rounded bg-amber-100 border border-amber-400/60"></div><span class="text-reeve-muted">Merged</span></div>
+                            <div class="flex items-center gap-1.5"><div class="w-3 h-3 rounded bg-blue-100 border border-blue-400/60"></div><span class="text-reeve-muted">Dessert</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 2: Deposits -->
+            <div class="grid lg:grid-cols-2 gap-12 items-center mb-24">
+                <div class="order-2 lg:order-1 relative">
+                    <div class="bg-white rounded-3xl shadow-soft border border-reeve-border p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="font-sans font-bold text-reeve-dark" style="font-weight:800">Deposit Settings</span>
+                            <div class="flex items-center gap-2">
+                                <div class="w-2 h-2 bg-green-400 rounded-full"></div>
+                                <span class="text-xs text-reeve-muted">Active</span>
+                            </div>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="bg-reeve-cream rounded-xl p-4">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="font-medium text-sm">Friday & Saturday evenings</span>
+                                    <span class="text-xs bg-reeve-slate/10 text-reeve-slate px-2 py-1 rounded-full font-semibold">£5/head</span>
+                                </div>
+                                <p class="text-xs text-reeve-muted">Parties of 2+ after 6pm</p>
+                            </div>
+                            <div class="bg-reeve-cream rounded-xl p-4">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="font-medium text-sm">Large parties (6+)</span>
+                                    <span class="text-xs bg-reeve-slate/10 text-reeve-slate px-2 py-1 rounded-full font-semibold">£10/head</span>
+                                </div>
+                                <p class="text-xs text-reeve-muted">Any day, any time</p>
+                            </div>
+                            <div class="bg-reeve-cream rounded-xl p-4">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="font-medium text-sm">Special events & holidays</span>
+                                    <span class="text-xs bg-reeve-slate/10 text-reeve-slate px-2 py-1 rounded-full font-semibold">£15/head</span>
+                                </div>
+                                <p class="text-xs text-reeve-muted">Valentine's, NYE, Christmas</p>
+                            </div>
+                        </div>
+                        <div class="mt-4 p-4 bg-reeve-black/5 rounded-xl border border-reeve-black/10">
+                            <div class="flex items-center gap-2 text-sm">
+                                <i class="fa-solid fa-shield-halved text-reeve-slate"></i>
+                                <span class="text-reeve-slate font-medium">Deposits go directly to your Stripe account</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2">
+                    <div class="inline-flex items-center gap-2 bg-reeve-pale/60 border border-reeve-light/40 rounded-full px-3 py-1.5 mb-4">
+                        <i class="fa-solid fa-shield-halved text-reeve-slate text-xs"></i>
+                        <span class="text-xs font-semibold text-reeve-slate uppercase tracking-wider">Deposit Protection</span>
+                    </div>
+                    <h3 class="font-sans text-3xl lg:text-4xl text-reeve-dark mb-4" style="font-weight:800">
+                        Kill no-shows<br>with smart deposits
+                    </h3>
+                    <p class="text-reeve-muted text-lg leading-relaxed mb-6">
+                        Set flexible deposit rules by day, time, party size, or occasion. Funds go straight to your Stripe account — we never touch your money.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3">
+                            <div class="w-6 h-6 bg-reeve-pale rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-check text-reeve-slate text-xs"></i>
+                            </div>
+                            <span class="text-reeve-text">Configurable rules per day, time & party size</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <div class="w-6 h-6 bg-reeve-pale rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-check text-reeve-slate text-xs"></i>
+                            </div>
+                            <span class="text-reeve-text">Automatic refunds on valid cancellations</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <div class="w-6 h-6 bg-reeve-pale rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-check text-reeve-slate text-xs"></i>
+                            </div>
+                            <span class="text-reeve-text">PCI-compliant Stripe Connect integration</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Feature 3: Guest Insights -->
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="inline-flex items-center gap-2 bg-reeve-pale/60 border border-reeve-light/40 rounded-full px-3 py-1.5 mb-4">
+                        <i class="fa-solid fa-chart-line text-reeve-slate text-xs"></i>
+                        <span class="text-xs font-semibold text-reeve-slate uppercase tracking-wider">Guest Intelligence</span>
+                    </div>
+                    <h3 class="font-sans text-3xl lg:text-4xl text-reeve-dark mb-4" style="font-weight:800">
+                        Know your guests<br>before they sit down
+                    </h3>
+                    <p class="text-reeve-muted text-lg leading-relaxed mb-6">
+                        See visit history, preferences, allergies, and spend data for every guest. Turn first-timers into regulars with personalised service that feels effortless.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3">
+                            <div class="w-6 h-6 bg-reeve-pale rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-check text-reeve-slate text-xs"></i>
+                            </div>
+                            <span class="text-reeve-text">Full guest CRM with visit history & notes</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <div class="w-6 h-6 bg-reeve-pale rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-check text-reeve-slate text-xs"></i>
+                            </div>
+                            <span class="text-reeve-text">Allergy & dietary flags visible at booking</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <div class="w-6 h-6 bg-reeve-pale rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-check text-reeve-slate text-xs"></i>
+                            </div>
+                            <span class="text-reeve-text">VIP tagging & automated re-engagement</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="relative">
+                    <div class="bg-white rounded-3xl shadow-soft border border-reeve-border p-6">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-14 h-14 bg-reeve-black rounded-full flex items-center justify-center text-white font-sans font-bold text-xl" style="font-weight:800">JC</div>
+                            <div>
+                                <p class="font-sans font-bold text-reeve-dark text-lg" style="font-weight:800">James Chen</p>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-xs bg-reeve-gold/20 text-reeve-gold px-2 py-0.5 rounded-full font-semibold">VIP</span>
+                                    <span class="text-xs text-reeve-muted">Member since 2023</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-3 gap-3 mb-5">
+                            <div class="bg-reeve-cream rounded-xl p-3 text-center">
+                                <p class="font-sans text-2xl font-bold text-reeve-dark" style="font-weight:800">24</p>
+                                <p class="text-xs text-reeve-muted">Visits</p>
+                            </div>
+                            <div class="bg-reeve-cream rounded-xl p-3 text-center">
+                                <p class="font-sans text-2xl font-bold text-reeve-dark" style="font-weight:800">£68</p>
+                                <p class="text-xs text-reeve-muted">Avg spend</p>
+                            </div>
+                            <div class="bg-reeve-cream rounded-xl p-3 text-center">
+                                <p class="font-sans text-2xl font-bold text-reeve-dark" style="font-weight:800">0</p>
+                                <p class="text-xs text-reeve-muted">No-shows</p>
+                            </div>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-2 text-sm">
+                                <i class="fa-solid fa-wheat-awn text-amber-500"></i>
+                                <span class="text-reeve-muted">Gluten-free</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-sm">
+                                <i class="fa-solid fa-wine-glass text-purple-400"></i>
+                                <span class="text-reeve-muted">Prefers window table, usually orders Barolo</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-sm">
+                                <i class="fa-solid fa-cake-candles text-pink-400"></i>
+                                <span class="text-reeve-muted">Birthday: 14 March — send offer?</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="py-20 lg:py-28 bg-white relative">
+        <div class="absolute inset-0 bg-grain opacity-20"></div>
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="font-sans text-3xl md:text-4xl lg:text-5xl text-reeve-dark mb-6" style="font-weight:900">
+                    ReeveOS vs Treatwell
+                </h2>
+                <p class="text-lg text-reeve-muted">
+                    See why businesses are making the switch.
+                </p>
+            </div>
+            
+            <div class="bg-reeve-cream rounded-3xl border border-reeve-border overflow-hidden">
+                <div class="grid grid-cols-3 text-center font-semibold text-sm py-4 border-b border-reeve-border bg-white">
+                    <div class="text-reeve-muted">Feature</div>
+                    <div class="text-reeve-black flex items-center justify-center gap-2">
+                        <div class="bg-reeve-black text-white w-6 h-6 rounded flex items-center justify-center text-xs font-bold">R</div>
+                        ReeveOS
+                    </div>
+                    <div class="text-reeve-muted">Treatwell</div>
+                </div>
+                
+                <div class="divide-y divide-reeve-border">
+                    <div class="grid grid-cols-3 text-center py-4 text-sm items-center">
+                        <div class="text-reeve-text font-medium text-left pl-6">Best for</div>
+                        <div class="text-reeve-slate font-bold">Every business</div>
+                        <div class="text-reeve-muted">Beauty</div>
+                    </div>
+                    <div class="grid grid-cols-3 text-center py-4 text-sm items-center bg-white/50">
+                        <div class="text-reeve-text font-medium text-left pl-6">Commission</div>
+                        <div class="text-reeve-slate font-bold">0%</div>
+                        <div class="text-reeve-muted">25–50%</div>
+                    </div>
+                    <div class="grid grid-cols-3 text-center py-4 text-sm items-center">
+                        <div class="text-reeve-text font-medium text-left pl-6">Monthly cost</div>
+                        <div class="text-reeve-slate font-bold">From £0</div>
+                        <div class="text-reeve-muted">Commission</div>
+                    </div>
+                    <div class="grid grid-cols-3 text-center py-4 text-sm items-center bg-white/50">
+                        <div class="text-reeve-text font-medium text-left pl-6">Deposits go to</div>
+                        <div class="text-reeve-slate font-bold">Your Stripe</div>
+                        <div class="text-reeve-muted">They hold</div>
+                    </div>
+                    <div class="grid grid-cols-3 text-center py-4 text-sm items-center">
+                        <div class="text-reeve-text font-medium text-left pl-6">SMS reminders</div>
+                        <div class="text-reeve-slate font-bold">Included</div>
+                        <div class="text-reeve-muted">Included</div>
+                    </div>
+                    <div class="grid grid-cols-3 text-center py-4 text-sm items-center bg-white/50">
+                        <div class="text-reeve-text font-medium text-left pl-6">Own your data</div>
+                        <div><i class="fa-solid fa-circle-check text-reeve-gold text-lg"></i></div>
+                        <div><i class="fa-solid fa-circle-xmark text-red-300 text-lg"></i></div>
+                    </div>
+                    <div class="grid grid-cols-3 text-center py-4 text-sm items-center">
+                        <div class="text-reeve-text font-medium text-left pl-6">Custom branding</div>
+                        <div><i class="fa-solid fa-circle-check text-reeve-gold text-lg"></i></div>
+                        <div><i class="fa-solid fa-circle-xmark text-red-300 text-lg"></i></div>
+                    </div>
+                    <div class="grid grid-cols-3 text-center py-4 text-sm items-center bg-white/50">
+                        <div class="text-reeve-text font-medium text-left pl-6">Calendar sync</div>
+                        <div class="text-reeve-slate font-bold">Google &amp; Outlook</div>
+                        <div><i class="fa-solid fa-circle-xmark text-red-300 text-lg"></i></div>
+                    </div>
+                    <div class="grid grid-cols-3 text-center py-4 text-sm items-center">
+                        <div class="text-reeve-text font-medium text-left pl-6">Support</div>
+                        <div class="text-reeve-slate font-bold">AI chat + Email</div>
+                        <div class="text-reeve-muted">Email</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 lg:py-28 bg-reeve-cream relative">
+        <div class="absolute inset-0 bg-grain opacity-30"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <h2 class="font-sans text-3xl md:text-4xl lg:text-5xl text-reeve-dark mb-6" style="font-weight:900">
+                    Loved by restaurateurs
+                </h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl p-8 border border-reeve-border">
+                    <div class="flex gap-1 mb-4">
+                        <i class="fa-solid fa-star text-reeve-gold"></i>
+                        <i class="fa-solid fa-star text-reeve-gold"></i>
+                        <i class="fa-solid fa-star text-reeve-gold"></i>
+                        <i class="fa-solid fa-star text-reeve-gold"></i>
+                        <i class="fa-solid fa-star text-reeve-gold"></i>
+                    </div>
+                    <p class="text-reeve-text leading-relaxed mb-6">"Our no-show rate went from 12% to under 2% in the first month. The deposit system pays for itself ten times over."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-reeve-slate rounded-full flex items-center justify-center text-white font-bold text-sm">MP</div>
+                        <div>
+                            <p class="font-semibold text-sm text-reeve-dark">Marco Pellegrini</p>
+                            <p class="text-xs text-reeve-muted">Owner, Trattoria Verde — Manchester</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-2xl p-8 border border-reeve-border">
+                    <div class="flex gap-1 mb-4">
+                        <i class="fa-solid fa-star text-reeve-gold"></i>
+                        <i class="fa-solid fa-star text-reeve-gold"></i>
+                        <i class="fa-solid fa-star text-reeve-gold"></i>
+                        <i class="fa-solid fa-star text-reeve-gold"></i>
+                        <i class="fa-solid fa-star text-reeve-gold"></i>
+                    </div>
+                    <p class="text-reeve-text leading-relaxed mb-6">"We ditched OpenTable and saved £800/month in cover fees alone. Plus we actually own our guest data now."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-reeve-black rounded-full flex items-center justify-center text-white font-bold text-sm">AK</div>
+                        <div>
+                            <p class="font-semibold text-sm text-reeve-dark">Amara Kofi</p>
+                            <p class="text-xs text-reeve-muted">GM, The Copper Pan — Bristol</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-2xl p-8 border border-reeve-border">
+                    <div class="flex gap-1 mb-4">
+                        <i class="fa-solid fa-star text-reeve-gold"></i>
+                        <i class="fa-solid fa-star text-reeve-gold"></i>
+                        <i class="fa-solid fa-star text-reeve-gold"></i>
+                        <i class="fa-solid fa-star text-reeve-gold"></i>
+                        <i class="fa-solid fa-star text-reeve-gold"></i>
+                    </div>
+                    <p class="text-reeve-text leading-relaxed mb-6">"The floor plan view on the tablet is a game-changer. Staff picked it up in minutes, and service is so much smoother now."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-reeve-gold rounded-full flex items-center justify-center text-reeve-dark font-bold text-sm">RH</div>
+                        <div>
+                            <p class="font-semibold text-sm text-reeve-dark">Rachel Hughes</p>
+                            <p class="text-xs text-reeve-muted">Owner, The Garden Table — Edinburgh</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 lg:py-28 bg-reeve-black relative overflow-hidden">
+        <div class="absolute inset-0 bg-grain opacity-20"></div>
+        <div class="absolute top-0 right-0 w-96 h-96 bg-reeve-gold/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-80 h-80 bg-reeve-dark/30 rounded-full blur-3xl"></div>
+        
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center">
+            <h2 class="font-sans text-4xl lg:text-5xl xl:text-6xl text-white mb-6 cta-headline" style="font-weight:900">
+                Ready to fill every table?
+            </h2>
+            <p class="text-xl text-white/70 mb-10 max-w-2xl mx-auto">
+                Join 1,200+ UK restaurants already using ReeveOS. Set up in under 10 minutes, no contract, no per-cover fees.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://portal.reeve.app/signup" class="bg-white text-reeve-black font-semibold py-4 px-10 rounded-full hover:bg-reeve-pale transition-all duration-300 shadow-lg text-lg">
+                    Start Free Trial
+                </a>
+                <a href="/contact.html" class="border-2 border-white/30 text-white font-semibold py-4 px-10 rounded-full hover:bg-white/10 transition-all duration-300 text-lg">Get In Touch</a>
+            </div>
+            <p class="text-sm text-white/40 mt-6">No credit card required · 14-day free trial · Cancel anytime</p>
+        </div>
+    </section>
+
+        <footer id="footer" class="bg-reeve-dark text-white pt-16 sm:pt-20 pb-8 sm:pb-10 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-10 mb-12 sm:mb-16">
+                <!-- Brand -->
+                <div class="col-span-2">
+                    <a href="/" class="flex items-center gap-3 mb-6 no-underline">
+                        <div class="bg-reeve-gold text-reeve-black w-10 h-10 rounded-xl flex items-center justify-center">
+                            <span class="font-sans font-extrabold text-xl">R</span>
+                        </div>
+                        <span class="font-sans font-extrabold text-2xl text-white tracking-tight">ReeveOS</span>
+                    </a>
+                    <p class="text-white/50 text-sm leading-relaxed mb-6 max-w-xs">The zero-commission booking &amp; ordering platform helping UK restaurants and service businesses thrive.</p>
+                    <div class="flex gap-3">
+                        <a href="https://instagram.com/reeveuk" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-reeve-gold hover:text-reeve-dark transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://linkedin.com/company/reeve" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-reeve-gold hover:text-reeve-dark transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://twitter.com/reeveuk" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-reeve-gold hover:text-reeve-dark transition-colors"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <!-- Discover -->
+                <div>
+                    <h4 class="font-bold text-white text-sm uppercase tracking-wider mb-4">Discover</h4>
+                    <ul class="space-y-2.5 text-sm text-white/50">
+                        <li><a href="/industries/restaurants.html" class="hover:text-reeve-gold transition-colors">Restaurants</a></li>
+                        <li><a href="/industries/salons-spas.html" class="hover:text-reeve-gold transition-colors">Hair Salons</a></li>
+                        <li><a href="/industries/barbers.html" class="hover:text-reeve-gold transition-colors">Barbers</a></li>
+                        <li><a href="/industries/wellness-clinics.html" class="hover:text-reeve-gold transition-colors">Spas &amp; Wellness</a></li>
+                        <li><a href="/industries/index.html" class="hover:text-reeve-gold transition-colors">Browse All</a></li>
+                    </ul>
+                </div>
+
+                <!-- Features -->
+                <div>
+                    <h4 class="font-bold text-white text-sm uppercase tracking-wider mb-4">Features</h4>
+                    <ul class="space-y-2.5 text-sm text-white/50">
+                        <li><a href="/features/restaurants.html" class="hover:text-reeve-gold transition-colors">For Restaurants</a></li>
+                        <li><a href="/features/calendar.html" class="hover:text-reeve-gold transition-colors">Smart Calendar</a></li>
+                        <li><a href="/features/payments.html" class="hover:text-reeve-gold transition-colors">Stripe Payments</a></li>
+                        <li><a href="/features/mobile-app.html" class="hover:text-reeve-gold transition-colors">Mobile App</a></li>
+                        <li><a href="/features/integrations.html" class="hover:text-reeve-gold transition-colors">Integrations</a></li>
+                        <li><a href="/features/uber-direct.html" class="hover:text-reeve-gold transition-colors">Uber Direct</a></li>
+                    </ul>
+                </div>
+
+                <!-- For Business -->
+                <div>
+                    <h4 class="font-bold text-white text-sm uppercase tracking-wider mb-4">For Business</h4>
+                    <ul class="space-y-2.5 text-sm text-white/50">
+                        <li><a href="/#features" class="hover:text-reeve-gold transition-colors">How It Works</a></li>
+                        <li><a href="/#pricing" class="hover:text-reeve-gold transition-colors">Pricing</a></li>
+                        <li><a href="/features/team-up.html" class="hover:text-reeve-gold transition-colors">Team Up &amp; Save</a></li>
+                        <li><a href="https://portal.reeve.app/signup" class="hover:text-reeve-gold transition-colors">Get Started</a></li>
+                        <li><a href="https://portal.reeve.app/login" class="hover:text-reeve-gold transition-colors">Partner Login</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company -->
+                <div>
+                    <h4 class="font-bold text-white text-sm uppercase tracking-wider mb-4">Company</h4>
+                    <ul class="space-y-2.5 text-sm text-white/50">
+                        <li><a href="/about.html" class="hover:text-reeve-gold transition-colors">About Us</a></li>
+                        <li><a href="/#faq" class="hover:text-reeve-gold transition-colors">FAQs</a></li>
+                        <li><a href="/support.html" class="hover:text-reeve-gold transition-colors">Support Center</a></li>
+                        <li><a href="/contact.html" class="hover:text-reeve-gold transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Giant watermark -->
+            <div class="border-t border-white/10 pt-10 text-center">
+                <h1 class="font-sans font-extrabold text-[20vw] md:text-[12vw] leading-none text-reeve-gold opacity-10 select-none">ReeveOS</h1>
+            </div>
+
+            <!-- Bottom bar -->
+            <div class="flex flex-col md:flex-row justify-between items-center mt-10 pt-6 border-t border-white/5 text-xs text-white/40">
+                <p>&copy; 2026 ReeveOS Ltd. All rights reserved.</p>
+                <div class="flex items-center gap-6 mt-4 md:mt-0">
+                    <a href="/privacy.html" class="hover:text-reeve-gold transition-colors">Privacy Policy</a>
+                    <a href="/terms.html" class="hover:text-reeve-gold transition-colors">Terms of Service</a>
+                    <a href="/cookies.html" class="hover:text-reeve-gold transition-colors">Cookie Policy</a>
+                    <a href="/sitemap.html" class="hover:text-reeve-gold transition-colors">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chart rendered with pure CSS bars above -->
+<script>
+(function(){
+var sp=document.createElement("div");sp.id="sp";sp.style.width="0%";document.body.prepend(sp);
+window.addEventListener("scroll",function(){
+  sp.style.width=(document.documentElement.scrollTop/(document.documentElement.scrollHeight-innerHeight)*100)+"%";
+},{passive:true});
+
+var io=new IntersectionObserver(function(ee){ee.forEach(function(e){
+  if(e.isIntersecting){e.target.classList.add("av");}
+  else{e.target.classList.remove("av");}
+})},{threshold:.06,rootMargin:"0px 0px -30px 0px"});
+
+// Auto-animate by selector
+var rules=[
+  {s:"section",a:"u"},
+  {s:"h1",a:"u"},{s:"h2",a:"u"},{s:"h3",a:"u"},
+  {s:".rounded-3xl",a:"s",h:"fx-lift fx-tilt fx-shim",sg:1},
+  {s:".rounded-2xl",a:"s",h:"fx-lift fx-glow",sg:1},
+  {s:".rounded-xl",a:"u",h:"fx-lift fx-shim",sg:1},
+  {s:".rounded-lg",a:"u",h:"fx-lift",sg:1},
+  {s:"section p",a:"u"},
+  {s:"li",a:"l",sg:1},
+  {s:"img:not([width])",a:"b"},
+];
+
+var done=new Set();
+rules.forEach(function(r){
+  document.querySelectorAll(r.s).forEach(function(el,idx){
+    if(done.has(el)||el.closest("nav")||el.closest("#navbar")||el.id==="navbar"||el.tagName==="NAV"||el.closest("[class*=fixed]"))return;
+    if(r.a){el.setAttribute("data-a",r.a);io.observe(el);done.add(el);}
+    if(r.h)r.h.split(" ").forEach(function(c){el.classList.add(c)});
+    if(r.sg){
+      var sibs=Array.from(el.parentElement.children).filter(function(c){return c.matches(r.s)});
+      var i=sibs.indexOf(el);
+      if(i>=0&&i<8)el.classList.add("ad"+(i+1));
+    }
+    if(r.h&&r.h.indexOf("fx-tilt")>=0){
+      el.addEventListener("mousemove",function(e){
+        var rc=el.getBoundingClientRect();
+        var x=(e.clientX-rc.left)/rc.width-.5;
+        var y=(e.clientY-rc.top)/rc.height-.5;
+        el.style.transform="perspective(1000px) rotateY("+x*10+"deg) rotateX("+-y*10+"deg) translateY(-8px) scale(1.02)";
+      });
+      el.addEventListener("mouseleave",function(){el.style.transform="";});
+    }
+  });
+});
+
+// Grid children stagger
+document.querySelectorAll("[class*=\"grid grid-cols\"]").forEach(function(g){if(g.closest("nav")||g.closest("#navbar"))return;
+  Array.from(g.children).forEach(function(kid,i){
+    if(!done.has(kid)){
+      kid.setAttribute("data-a","s");
+      if(i<8)kid.classList.add("ad"+(i+1));
+      io.observe(kid);done.add(kid);
+    }
+  });
+});
+
+// Float absolute widgets
+var floats=["fx-fy","fx-fxy","fx-fr"];
+var fdels=["fd1","fd2","fd3"];
+document.querySelectorAll("[class*=absolute][class*=rounded]").forEach(function(el,i){if(el.closest("nav")||el.closest("#navbar"))return;
+  var r=el.getBoundingClientRect();
+  if(r.width>20&&r.width<400){el.classList.add(floats[i%3],fdels[i%3]);}
+});
+
+// Counters
+var co=new IntersectionObserver(function(ee){ee.forEach(function(e){
+  if(e.isIntersecting&&!e.target._c){
+    e.target._c=1;var el=e.target;
+    el.style.animation="cg 3s ease infinite";
+    var t=el.textContent.trim();var m=t.match(/([\d,.]+)/);if(!m)return;
+    var tgt=parseFloat(m[1].replace(/,/g,""));
+    var pre=t.substring(0,t.indexOf(m[1]));
+    var suf=t.substring(t.indexOf(m[1])+m[1].length);
+    var dec=m[1].indexOf(".")>=0;var st=performance.now();
+    function tick(now){
+      var p=Math.min((now-st)/2500,1);var ea=1-Math.pow(1-p,4);
+      var c=tgt*ea;el.textContent=pre+(dec?c.toFixed(1):Math.floor(c).toLocaleString())+suf;
+      if(p<1)requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+})},{threshold:.5});
+document.querySelectorAll("[class*=text-5xl][class*=text-white],[class*=text-6xl][class*=text-white]").forEach(function(el){co.observe(el)});
+
+// Magnetic buttons
+document.querySelectorAll("button.rounded-full,a.rounded-full").forEach(function(btn){
+  if(btn.closest("nav")||btn.closest("#navbar"))return;
+  btn.addEventListener("mousemove",function(e){
+    var r=btn.getBoundingClientRect();
+    btn.style.transform="translate("+(e.clientX-r.left-r.width/2)*.18+"px,"+(e.clientY-r.top-r.height/2)*.18+"px)";
+    btn.style.transition="transform .1s ease-out";
+  });
+  btn.addEventListener("mouseleave",function(){
+    btn.style.transform="";btn.style.transition="transform .4s cubic-bezier(.34,1.56,.64,1)";
+  });
+});
+
+// Parallax blobs
+var blobs=document.querySelectorAll("[class*=blur]");
+var tk=false;
+window.addEventListener("scroll",function(){
+  if(!tk){requestAnimationFrame(function(){
+    blobs.forEach(function(b,i){
+      var sp=i%2===0?.07:-.05;
+      var rc=b.getBoundingClientRect();
+      b.style.transform="translateY("+(innerHeight/2-rc.top-rc.height/2)*sp+"px)";
+    });tk=false;});tk=true;}
+},{passive:true});
+
+// Smooth anchor scroll
+document.querySelectorAll("a[href^=\"#\"]").forEach(function(a){
+  a.addEventListener("click",function(e){e.preventDefault();
+    var t=document.querySelector(a.getAttribute("href"));
+    if(t)t.scrollIntoView({behavior:"smooth",block:"start"});
+  });
+});
+
+console.log("Animation engine: "+done.size+" elements");
+})();
+</script>
+<script>window.scrollTo(0,0);</script>
+<script src="/js/reeve-chat.js" defer></script>
+</body>
+</html>
